@@ -18,7 +18,7 @@
     android:orientation="vertical"
     tools:context="com.example.student.courtcounter.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="40px"
@@ -26,13 +26,17 @@
         android:background="#000099"
         android:text="team name"
         android:textAlignment="center"
-        android:textSize="100px"/>
+        android:textSize="100px"
+        android:id="@+id/team1"
+        android:hint="team1"
+        android:imeOptions = "actionDone"
+        android:inputType="text"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="40px"
         android:paddingBottom="40px"
-        android:background="#009900"
+        android:background="#ffff00"
         android:text="score"
         android:textAlignment="center"
         android:textSize="100px"/>
@@ -42,14 +46,19 @@
         android:paddingTop="40px"
         android:paddingBottom="40px"
         android:background="#990000"
-        android:text="0"
+        android:id="@+id/player1Score"
         android:textAlignment="center"
         android:textSize="100px"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewName"
-        android:text="+1 point"/>
+        android:text="+1 point"
+        android:onClick="infinityClick1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-1 point"
+        android:onClick="infinityClick3"/>
 
 </LinearLayout>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,21 +69,25 @@ android:layout_weight="1"
 android:orientation="vertical"
 tools:context="com.example.student.courtcounter.MainActivity">
 
-<TextView
+<EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="40px"
     android:paddingBottom="40px"
-    android:background="#000099"
+    android:background="#ff9900"
     android:text="team name"
     android:textAlignment="center"
-    android:textSize="100px"/>
+    android:textSize="100px"
+    android:id="@+id/team2"
+    android:hint="team2"
+    android:imeOptions = "actionDone"
+    android:inputType="text"/>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="40px"
     android:paddingBottom="40px"
-    android:background="#009900"
+    android:background="#990099"
     android:text="score"
     android:textAlignment="center"
     android:textSize="100px"/>
@@ -83,21 +96,25 @@ tools:context="com.example.student.courtcounter.MainActivity">
     android:layout_height="wrap_content"
     android:paddingTop="40px"
     android:paddingBottom="40px"
-    android:background="#990000"
-    android:text="0"
+    android:background="#009900"
+    android:id="@+id/player2Score"
     android:textAlignment="center"
     android:textSize="100px"/>
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/textViewotherName"
-    android:text="+1 point"/>
-
+    android:text="+1 point"
+    android:onClick="infinityClick2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-1 point"
+        android:onClick="infinityClick5"/>
 </LinearLayout>
 </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="reset game"
-        />
+        android:text="game over"
+        android:onClick="infinityClick4"/>
 </LinearLayout>
